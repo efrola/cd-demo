@@ -4,7 +4,7 @@
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "mesosphere/cd-demo-app:latest"
+      "image": "efrola/dcdemo:latest"
     },
     "portMappings": [
       {
@@ -18,7 +18,7 @@
   "cpus": 0.1,
   "instances": 1,
   "labels": {
-    "HAPROXY_0_VHOST": "ELB_HOSTNAME",
+    "HAPROXY_0_VHOST": "ext-EdF8875638ac36b0bf2-7278c5003035473c.elb.us-east-1.amazonaws.com",
     "HAPROXY_GROUP": "external",
     "lastChangedBy": "velocity-team@mesosphere.com"
   },
