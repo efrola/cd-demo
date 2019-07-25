@@ -1,7 +1,7 @@
 {
   "labels": {
     "DCOS_SERVICE_SCHEME": "http",
-    "HAPROXY_0_VHOST": "ext-edfgen11-eef65fbadcb1bbf2.elb.us-east-1.amazonaws.com",
+    "HAPROXY_0_VHOST": "ext-EdFd29584c2ec79ae60-db3a094070f43acd.elb.us-east-1.amazonaws.com",
     "HAPROXY_GROUP": "external",
     "DCOS_SERVICE_REWRITE_REQUEST_URLS": "true",
     "lastChangedBy": "velocity-team@mesosphere.com",
