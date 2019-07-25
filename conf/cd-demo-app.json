@@ -1,12 +1,6 @@
 {
   "labels": {
-    "DCOS_SERVICE_SCHEME": "http",
-    "HAPROXY_0_VHOST": "ext-EdFd29584c2ec79ae60-db3a094070f43acd.elb.us-east-1.amazonaws.com",
-    "HAPROXY_GROUP": "external",
-    "DCOS_SERVICE_REWRITE_REQUEST_URLS": "true",
-    "lastChangedBy": "velocity-team@mesosphere.com",
-    "DCOS_SERVICE_NAME": "jenkins-deployed-app",
-    "DCOS_SERVICE_PORT_INDEX": "0"
+    "HAPROXY_GROUP": "external"
   },
   "id": "/jenkins-deployed-app",
   "backoffFactor": 1.15,
@@ -17,18 +11,15 @@
       {
         "containerPort": 4000,
         "hostPort": 0,
-        "labels": {
-          "VIP_0": "/jenkins-deployed-app:4000"
-        },
         "protocol": "tcp",
-        "servicePort": 10101,
-        "name": "default"
+        "servicePort": 10103,
+        "name": "http-port"
       }
     ],
     "type": "DOCKER",
     "volumes": [],
     "docker": {
-      "image": "efrola/dcdemo:399205b3e60e2fa0ae26909d18fee313a5941245",
+      "image": "efrola/dcdemo:c11bf670f74d0d60b1b0ba3f1e3a3e384595a7a2",
       "forcePullImage": true,
       "privileged": false,
       "parameters": []
@@ -36,14 +27,26 @@
   },
   "cpus": 0.1,
   "disk": 0,
+  "healthChecks": [
+    {
+      "gracePeriodSeconds": 300,
+      "intervalSeconds": 60,
+      "maxConsecutiveFailures": 3,
+      "portIndex": 0,
+      "timeoutSeconds": 20,
+      "delaySeconds": 15,
+      "protocol": "MESOS_HTTP",
+      "path": "/",
+      "ipProtocol": "IPv4"
+    }
+  ],
   "instances": 1,
   "maxLaunchDelaySeconds": 300,
   "mem": 128,
   "gpus": 0,
   "networks": [
     {
-      "name": "dcos",
-      "mode": "container"
+      "mode": "container/bridge"
     }
   ],
   "requirePorts": false,
