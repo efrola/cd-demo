@@ -4,7 +4,8 @@
   "container": {
     "type": "DOCKER",
     "docker": {
-      "image": "efrola/dcdemo:latest"
+      "image": "efrola/dcdemo:latest", 
+      "forcePullImage": true
     },
     "portMappings": [
       {
