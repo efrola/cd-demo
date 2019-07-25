@@ -11,7 +11,7 @@
   "id": "/jenkins-deployed-app",
   "backoffFactor": 1.15,
   "backoffSeconds": 1,
-  "cmd": "jekyll serve",
+  "cmd": "jekyll server",
   "container": {
     "portMappings": [
       {
@@ -36,18 +36,6 @@
   },
   "cpus": 0.1,
   "disk": 0,
-  "healthChecks": [
-    {
-      "gracePeriodSeconds": 300,
-      "intervalSeconds": 60,
-      "maxConsecutiveFailures": 3,
-      "portIndex": 0,
-      "timeoutSeconds": 20,
-      "delaySeconds": 15,
-      "protocol": "MESOS_HTTP",
-      "path": "/",
-      "ipProtocol": "IPv4"
-    }
   ],
   "instances": 1,
   "maxLaunchDelaySeconds": 300,
