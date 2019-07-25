@@ -17,7 +17,7 @@
   },
   "cpus": 0.1,
   "instances": 1,
-  "labels
+  "labels":{
     "HAPROXY_0_VHOST": "ext-edfgen11-eef65fbadcb1bbf2.elb.us-east-1.amazonaws.com",
     "HAPROXY_GROUP": "external",
     "lastChangedBy": "velocity-team@mesosphere.com"
