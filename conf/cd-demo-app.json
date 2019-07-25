@@ -11,7 +11,7 @@
   "id": "/jenkins-deployed-app",
   "backoffFactor": 1.15,
   "backoffSeconds": 1,
-  "cmd": "jekyll server",
+  "cmd": "jekyll serve",
   "container": {
     "portMappings": [
       {
