@@ -9,16 +9,17 @@
   "container": {
     "portMappings": [
       {
-        "containerPort": 0,
+        "containerPort": 4000,
         "hostPort": 10103,
         "protocol": "tcp",
-        "name": "default"
+        "servicePort": 10103,
+        "name": "http-port"
       }
     ],
     "type": "DOCKER",
     "volumes": [],
     "docker": {
-      "image": "efrola/dcdemo:5a31a8c3939552f53aabac445cf579ccf0ed1803",
+      "image": "efrola/dcdemo:c11bf670f74d0d60b1b0ba3f1e3a3e384595a7a2",
       "forcePullImage": true,
       "privileged": false,
       "parameters": []
